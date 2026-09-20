@@ -2,6 +2,7 @@
 
 * Login
 * Forgot Password
+* External Social Media Links: LinkedIn, Facebook, Twitter, YouTube
 
 ## 2. Dashboard
 
