@@ -50,3 +50,10 @@
 | ID       | Check                                             | Status  |
 | -------- | ------------------------------------------------- | ------- |
 | AUTH-015 | Кнопка Cancel возвращает на страницу авторизации | Not Run |
+
+## Google Authentication
+
+| ID | Check | Status |
+|---|---|---|
+| AUTH-016 | Отображение кнопки Sign in with Google | Not Run |
+| AUTH-017 | Переход к авторизации через Google | Not Run |
