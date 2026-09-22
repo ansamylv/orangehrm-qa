@@ -1056,3 +1056,218 @@ Steps:
 
 Postconditions:
 - Очистить Password.
+
+### TC-ADM-042 — Создание пользователя: Admin + invalid Employee Name + Enabled + valid Username + invalid Password + valid Confirm Password
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| User Role | Admin |
+| Employee Name | Невалидный |
+| Status | Enabled |
+| Username | Валидный |
+| Password | Невалидный |
+| Confirm Password | Валидный |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Выбрать Admin в User Role | Выбрано значение Admin |
+| 2 | Ввести несуществующий Employee Name | Employee Name отображается в поле |
+| 3 | Выбрать Enabled в Status | Выбрано значение Enabled |
+| 4 | Ввести валидный Username | Username отображается в поле |
+| 5 | Ввести невалидный Password | Отображается результат валидации Password |
+| 6 | Ввести валидный Confirm Password | Confirm Password отображается в поле |
+| 7 | Нажать Save | Пользователь не создаётся, отображаются сообщения валидации соответствующих полей |
+
+Postconditions:
+- Очистить форму Add User.
+
+
+### TC-ADM-043 — Создание пользователя: Admin + valid Employee Name + Disabled + invalid Username + valid Password + invalid Confirm Password
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| User Role | Admin |
+| Employee Name | Валидный |
+| Status | Disabled |
+| Username | Невалидный |
+| Password | Валидный |
+| Confirm Password | Невалидный |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Выбрать Admin в User Role | Выбрано значение Admin |
+| 2 | Ввести существующий Employee Name | Employee Name отображается в поле |
+| 3 | Выбрать Disabled в Status | Выбрано значение Disabled |
+| 4 | Ввести невалидный Username | Отображается результат валидации Username |
+| 5 | Ввести валидный Password | Password отображается в поле |
+| 6 | Ввести невалидный Confirm Password | Отображается результат валидации Confirm Password |
+| 7 | Нажать Save | Пользователь не создаётся, отображаются сообщения валидации соответствующих полей |
+
+Postconditions:
+- Очистить форму Add User.
+
+
+### TC-ADM-044 — Создание пользователя: ESS + invalid Employee Name + Enabled + invalid Username + valid Password + invalid Confirm Password
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| User Role | ESS |
+| Employee Name | Невалидный |
+| Status | Enabled |
+| Username | Невалидный |
+| Password | Валидный |
+| Confirm Password | Невалидный |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Выбрать ESS в User Role | Выбрано значение ESS |
+| 2 | Ввести несуществующий Employee Name | Employee Name отображается в поле |
+| 3 | Выбрать Enabled в Status | Выбрано значение Enabled |
+| 4 | Ввести невалидный Username | Отображается результат валидации Username |
+| 5 | Ввести валидный Password | Password отображается в поле |
+| 6 | Ввести невалидный Confirm Password | Отображается результат валидации Confirm Password |
+| 7 | Нажать Save | Пользователь не создаётся, отображаются сообщения валидации соответствующих полей |
+
+Postconditions:
+- Очистить форму Add User.
+
+
+### TC-ADM-045 — Создание пользователя: ESS + valid Employee Name + Enabled + invalid Username + invalid Password + valid Confirm Password
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| User Role | ESS |
+| Employee Name | Валидный |
+| Status | Enabled |
+| Username | Невалидный |
+| Password | Невалидный |
+| Confirm Password | Валидный |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Выбрать ESS в User Role | Выбрано значение ESS |
+| 2 | Ввести существующий Employee Name | Employee Name отображается в поле |
+| 3 | Выбрать Enabled в Status | Выбрано значение Enabled |
+| 4 | Ввести невалидный Username | Отображается результат валидации Username |
+| 5 | Ввести невалидный Password | Отображается результат валидации Password |
+| 6 | Ввести валидный Confirm Password | Confirm Password отображается в поле |
+| 7 | Нажать Save | Пользователь не создаётся, отображаются сообщения валидации соответствующих полей |
+
+Postconditions:
+- Очистить форму Add User.
+
+
+### TC-ADM-046 — Создание пользователя: ESS + valid Employee Name + Disabled + valid Username + invalid Password + invalid Confirm Password
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| User Role | ESS |
+| Employee Name | Валидный |
+| Status | Disabled |
+| Username | Валидный |
+| Password | Невалидный |
+| Confirm Password | Невалидный |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Выбрать ESS в User Role | Выбрано значение ESS |
+| 2 | Ввести существующий Employee Name | Employee Name отображается в поле |
+| 3 | Выбрать Disabled в Status | Выбрано значение Disabled |
+| 4 | Ввести валидный Username | Username отображается в поле |
+| 5 | Ввести невалидный Password | Отображается результат валидации Password |
+| 6 | Ввести невалидный Confirm Password | Отображается результат валидации Confirm Password |
+| 7 | Нажать Save | Пользователь не создаётся, отображаются сообщения валидации соответствующих полей |
+
+Postconditions:
+- Очистить форму Add User.
+
+
+### TC-ADM-047 — Создание пользователя: ESS + invalid Employee Name + Disabled + valid Username + valid Password + valid Confirm Password
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| User Role | ESS |
+| Employee Name | Невалидный |
+| Status | Disabled |
+| Username | Валидный |
+| Password | Валидный |
+| Confirm Password | Валидный |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Выбрать ESS в User Role | Выбрано значение ESS |
+| 2 | Ввести несуществующий Employee Name | Employee Name отображается в поле |
+| 3 | Выбрать Disabled в Status | Выбрано значение Disabled |
+| 4 | Ввести валидный Username | Username отображается в поле |
+| 5 | Ввести валидный Password | Password отображается в поле |
+| 6 | Ввести валидный Confirm Password | Confirm Password отображается в поле |
+| 7 | Нажать Save | Пользователь не создаётся, отображается валидация Employee Name |
+
+Postconditions:
+- Очистить форму Add User.
