@@ -611,3 +611,448 @@ Steps:
 
 Postconditions:
 - Раздел System Users свёрнут.
+
+## Add User — Validation
+
+### TC-ADM-025 — Username длиной более 5 символов
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Username | Более 5 символов |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение длиной более 5 символов в Username | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Сообщение Should be at least 5 characters не отображается |
+
+Postconditions:
+- Очистить Username.
+
+
+### TC-ADM-026 — Username длиной менее 5 символов
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Username | Менее 5 символов |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение длиной менее 5 символов в Username | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается сообщение Should be at least 5 characters |
+
+Postconditions:
+- Очистить Username.
+
+
+### TC-ADM-027 — Username длиной 5 символов
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Username | Ровно 5 символов |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение длиной 5 символов в Username | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Сообщение Should be at least 5 characters не отображается |
+
+Postconditions:
+- Очистить Username.
+
+
+### TC-ADM-028 — Пустой Username
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Username | Пустое значение |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Оставить Username пустым | Поле остаётся пустым |
+| 2 | Нажать Save | Отображается сообщение об обязательном заполнении Username |
+
+Postconditions:
+- Очистить форму Add User.
+
+
+### TC-ADM-029 — Username с пробелами
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Username | Значение с пробелами |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение с пробелами в Username | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается результат валидации Username |
+
+Postconditions:
+- Очистить Username.
+
+
+### TC-ADM-030 — Username со специальными символами
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Username | Значение со специальными символами |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение со специальными символами в Username | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается результат валидации Username |
+
+Postconditions:
+- Очистить Username.
+
+
+### TC-ADM-031 — Username на кириллице
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Username | Значение на кириллице |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение на кириллице в Username | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается результат валидации Username |
+
+Postconditions:
+- Очистить Username.
+
+
+## Password — Validation
+
+### TC-ADM-032 — Password длиной менее 7 символов
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Менее 7 символов |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение длиной менее 7 символов в Password | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается сообщение Should have at least 7 characters |
+
+Postconditions:
+- Очистить Password.
+
+
+### TC-ADM-033 — Password длиной более 7 символов
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Более 7 символов |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение длиной более 7 символов в Password | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Сообщение Should have at least 7 characters не отображается |
+
+Postconditions:
+- Очистить Password.
+
+
+### TC-ADM-034 — Password длиной 7 символов
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Ровно 7 символов |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение длиной 7 символов в Password | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Сообщение Should have at least 7 characters не отображается |
+
+Postconditions:
+- Очистить Password.
+
+
+### TC-ADM-035 — Пустой Password
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Пустое значение |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Оставить Password пустым | Поле остаётся пустым |
+| 2 | Нажать Save | Отображается сообщение Required |
+
+Postconditions:
+- Очистить форму Add User.
+
+
+### TC-ADM-036 — Password с пробелами
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Значение с пробелами |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение с пробелами в Password | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается результат валидации Password |
+
+Postconditions:
+- Очистить Password.
+
+
+### TC-ADM-037 — Password со специальными символами
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Значение со специальными символами |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение со специальными символами в Password | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается результат валидации Password |
+
+Postconditions:
+- Очистить Password.
+
+
+### TC-ADM-038 — Password на кириллице
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Значение на кириллице |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение на кириллице в Password | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается результат валидации Password |
+
+Postconditions:
+- Очистить Password.
+
+
+### TC-ADM-039 — Password с одной строчной буквой
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Значение с одной строчной буквой |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение с одной строчной буквой в Password | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается результат валидации Password |
+
+Postconditions:
+- Очистить Password.
+
+
+### TC-ADM-040 — Password без строчных букв
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Значение без строчных букв |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение без строчных букв в Password | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается результат валидации Password |
+
+Postconditions:
+- Очистить Password.
+
+
+### TC-ADM-041 — Password с двумя строчными буквами
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Значение с двумя строчными буквами |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Add User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение с двумя строчными буквами в Password | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается результат валидации Password |
+
+Postconditions:
+- Очистить Password.
