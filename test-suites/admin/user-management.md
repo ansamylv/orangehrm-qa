@@ -1271,3 +1271,490 @@ Steps:
 
 Postconditions:
 - Очистить форму Add User.
+
+## Edit User
+
+### TC-ADM-048 — Username длиной более 5 символов
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Username | Более 5 символов |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Edit User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение длиной более 5 символов в Username | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Сообщение Should be at least 5 characters не отображается |
+
+Postconditions:
+- Вернуть исходное значение Username.
+
+
+### TC-ADM-049 — Username длиной 5 символов
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Username | 5 символов |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Edit User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение длиной 5 символов в Username | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Сообщение Should be at least 5 characters не отображается |
+
+Postconditions:
+- Вернуть исходное значение Username.
+
+
+### TC-ADM-050 — Username длиной менее 5 символов
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Username | Менее 5 символов |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Edit User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение длиной менее 5 символов в Username | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается сообщение Should be at least 5 characters |
+
+Postconditions:
+- Вернуть исходное значение Username.
+
+
+### TC-ADM-051 — Пустой Username
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Username | Пустое поле |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Edit User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Очистить Username | Поле Username становится пустым |
+| 2 | Нажать Save | Отображается валидация обязательного поля Username |
+
+Postconditions:
+- Вернуть исходное значение Username.
+
+
+### TC-ADM-052 — Username со специальными символами
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Username | Значение со специальными символами |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Edit User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение со специальными символами в Username | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается результат валидации Username |
+
+Postconditions:
+- Вернуть исходное значение Username.
+
+
+### TC-ADM-053 — Username на кириллице
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Username | Значение на кириллице |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Edit User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение на кириллице в Username | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается результат валидации Username |
+
+Postconditions:
+- Вернуть исходное значение Username.
+
+
+### TC-ADM-054 — Username на латинице
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Username | Значение на латинице |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Edit User.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение на латинице в Username | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается результат валидации Username |
+
+Postconditions:
+- Вернуть исходное значение Username.
+
+
+## Edit User — Password Validation
+
+### TC-ADM-055 — Password длиной более 7 символов
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Более 7 символов |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Edit User.
+- Включён Change Password ? → Yes.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение длиной более 7 символов в Password | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Сообщение Should have at least 7 characters не отображается |
+
+Postconditions:
+- Отключить Change Password ?.
+
+
+### TC-ADM-056 — Password длиной 7 символов
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | 7 символов |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Edit User.
+- Включён Change Password ? → Yes.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение длиной 7 символов в Password | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Сообщение Should have at least 7 characters не отображается |
+
+Postconditions:
+- Отключить Change Password ?.
+
+
+### TC-ADM-057 — Password длиной менее 7 символов
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Менее 7 символов |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Edit User.
+- Включён Change Password ? → Yes.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение длиной менее 7 символов в Password | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается сообщение Should have at least 7 characters |
+
+Postconditions:
+- Отключить Change Password ?.
+
+
+### TC-ADM-058 — Пустой Password
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Пустое поле |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Edit User.
+- Включён Change Password ? → Yes.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Оставить Password пустым | Поле Password остаётся пустым |
+| 2 | Нажать Save | Отображается валидация обязательного поля Password |
+
+Postconditions:
+- Отключить Change Password ?.
+
+
+### TC-ADM-059 — Password с одной строчной буквой
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Значение с одной строчной буквой |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Edit User.
+- Включён Change Password ? → Yes.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение с одной строчной буквой в Password | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается результат валидации Password |
+
+Postconditions:
+- Отключить Change Password ?.
+
+
+### TC-ADM-060 — Password без строчных букв
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Значение без строчных букв |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Edit User.
+- Включён Change Password ? → Yes.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение без строчных букв в Password | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается результат валидации Password |
+
+Postconditions:
+- Отключить Change Password ?.
+
+
+### TC-ADM-061 — Password с двумя строчными буквами
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Значение с двумя строчными буквами |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Edit User.
+- Включён Change Password ? → Yes.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение с двумя строчными буквами в Password | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается результат валидации Password |
+
+Postconditions:
+- Отключить Change Password ?.
+
+
+### TC-ADM-062 — Password на кириллице
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Значение на кириллице |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Edit User.
+- Включён Change Password ? → Yes.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение на кириллице в Password | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается результат валидации Password |
+
+Postconditions:
+- Отключить Change Password ?.
+
+
+### TC-ADM-063 — Password на латинице
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Значение на латинице |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Edit User.
+- Включён Change Password ? → Yes.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести значение на латинице в Password | Значение отображается в поле |
+| 2 | Перейти к следующему полю | Отображается результат валидации Password |
+
+Postconditions:
+- Отключить Change Password ?.
+
+
+## Edit User — Confirm Password Validation
+
+### TC-ADM-064 — Валидный Confirm Password
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Валидное значение |
+| Confirm Password | Совпадает с Password |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Открыта форма Edit User.
+- Включён Change Password ? → Yes.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести валидный Password | Password отображается в поле |
+| 2 | Ввести такое же значение в Confirm Password | Confirm Password отображается в поле |
+| 3 | Перейти к следующему полю | Валидация Confirm Password проходит успешно |
+
+Postconditions:
+- Отключить Change Password ?.
+
+
+### TC-ADM-065 — Невалидный Confirm Password
+
+Priority: Medium
+
+Test Data:
+
+| Parameter | Value |
+|---|---|
+| Password | Валидное значение |
+| Confirm Password | Не совпадает с Password |
+
+Preconditions:
+- Пользователь авторизован в системе.
+- Открыта страница Admin → User Management.
+- Включён Change Password ? → Yes.
+
+Steps:
+
+| # | Step | Expected Result |
+|---|---|---|
+| 1 | Ввести валидный Password | Password отображается в поле |
+| 2 | Ввести отличающееся значение в Confirm Password | Confirm Password отображается в поле |
+| 3 | Перейти к следующему полю | Отображается результат валидации Confirm Password |
+
+Postconditions:
+- Отключить Change Password ?.
